@@ -15,7 +15,6 @@ public class Resposta {
 	private Usuario autor;
 	private Boolean solucao = false;
 
-	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
@@ -23,7 +22,6 @@ public class Resposta {
 		return result;
 	}
 
-	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
 			return true;

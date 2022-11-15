@@ -20,10 +20,6 @@ public class TopicoDto {
         this.dataCriacao = topico.getDataCriacao();
     }
 
-    public static List<TopicoDto> converter(List<Topico> topicos) {
-        return topicos.stream().map(TopicoDto::new).collect(Collectors.toList());
-    }
-
     public Long getId() {
         return id;
     }
@@ -38,5 +34,8 @@ public class TopicoDto {
 
     public LocalDateTime getDataCriacao() {
         return dataCriacao;
+    }
+    public static List<TopicoDto> converter(List<Topico> topicos) {
+        return topicos.stream().map(TopicoDto::new).collect(Collectors.toList());
     }
 }

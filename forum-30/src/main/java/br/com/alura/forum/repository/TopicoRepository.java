@@ -10,6 +10,6 @@ import java.util.List;
 public interface TopicoRepository extends JpaRepository<Topico, Long>{
     List<Topico> findByCursoNome(String nomeCurso);
     //para colocar o metodo no estilo que quiser, monte a query
-    @Query("SELECT t FROM Topico t WHERE t.curso.nome = :nomeCurso")
-    List<Topico> carregarPorNomeDoCurso(@Param("nomeCurso") String nomeCurso);
+   // @Query("SELECT t FROM Topico t WHERE t.curso.nome = :nomeCurso")
+    //List<Topico> carregarPorNomeDoCurso(@Param("nomeCurso") String nomeCurso);
 }
