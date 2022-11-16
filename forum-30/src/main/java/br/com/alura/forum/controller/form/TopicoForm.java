@@ -41,8 +41,20 @@ public class TopicoForm {
     public void setNomeCurso(String nomeCurso) {
         this.nomeCurso = nomeCurso;
     }
+
+
+
     public Topico converter(CursoRepository cursoRepository) {
         Curso curso = cursoRepository.findByNome(nomeCurso);
         return new Topico(titulo, mensagem, curso);
+    }
+
+    @Override
+    public String toString() {
+        return "TopicoForm{" +
+                "titulo='" + titulo + '\'' +
+                ", mensagem='" + mensagem + '\'' +
+                ", nomeCurso='" + nomeCurso + '\'' +
+                '}';
     }
 }
