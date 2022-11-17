@@ -11,9 +11,9 @@ import javax.validation.constraints.NotNull;
 
 public class TopicoForm {
 
-    @NotNull @NotEmpty @Length (min = 5)
+    @NotNull @NotEmpty @Length(min = 5)
     private String titulo;
-    @NotNull @NotEmpty @Length (min = 10)
+    @NotNull @NotEmpty @Length(min = 10)
     private String mensagem;
     @NotNull @NotEmpty
     private String nomeCurso;
@@ -47,14 +47,5 @@ public class TopicoForm {
     public Topico converter(CursoRepository cursoRepository) {
         Curso curso = cursoRepository.findByNome(nomeCurso);
         return new Topico(titulo, mensagem, curso);
-    }
-
-    @Override
-    public String toString() {
-        return "TopicoForm{" +
-                "titulo='" + titulo + '\'' +
-                ", mensagem='" + mensagem + '\'' +
-                ", nomeCurso='" + nomeCurso + '\'' +
-                '}';
     }
 }
