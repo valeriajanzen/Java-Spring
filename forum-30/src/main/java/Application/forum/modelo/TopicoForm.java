@@ -1,9 +1,6 @@
-package br.com.alura.forum.modelo;
+package Application.forum.modelo;
 
-import br.com.alura.forum.modelo.Curso;
-import br.com.alura.forum.modelo.Topico;
-import br.com.alura.forum.repository.CursoRepository;
-import org.springframework.stereotype.Controller;
+import Application.forum.repository.CursoRepository;
 import org.hibernate.validator.constraints.Length;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;

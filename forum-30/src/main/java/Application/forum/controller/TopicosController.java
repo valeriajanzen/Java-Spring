@@ -1,13 +1,16 @@
-package br.com.alura.forum.controller;
+package Application.forum.controller;
 
-import br.com.alura.forum.controller.dto.DetalhesDoTopicoDto;
-import br.com.alura.forum.controller.dto.TopicoDto;
-import br.com.alura.forum.modelo.TopicoForm;
-import br.com.alura.forum.modelo.Topico;
-import br.com.alura.forum.modelo.form.AtualizacaoTopicoForm;
-import br.com.alura.forum.repository.CursoRepository;
-import br.com.alura.forum.repository.TopicoRepository;
+import Application.forum.modelo.TopicoForm;
+import Application.forum.repository.TopicoRepository;
+import Application.forum.controller.dto.DetalhesDoTopicoDto;
+import Application.forum.controller.dto.TopicoDto;
+import Application.forum.modelo.Topico;
+import Application.forum.modelo.form.AtualizacaoTopicoForm;
+import Application.forum.repository.CursoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
@@ -28,12 +31,14 @@ public class TopicosController {
     private CursoRepository cursoRepository;
 
     @GetMapping
-    public List<TopicoDto> lista(String nomeCurso) {
+    public Page<TopicoDto> lista(@RequestParam(required = false) String nomeCurso, @RequestParam int pagina, @RequestParam int qtd) {
+
+        Pageable paginacao = PageRequest.of(pagina, qtd);
         if (nomeCurso == null) {
-            List<Topico> topicos = topicoRepository.findAll();
+            Page<Topico> topicos = topicoRepository.findAll(paginacao);
             return TopicoDto.converter(topicos);
         } else {
-            List<Topico> topicos = topicoRepository.findByCursoNome(nomeCurso);
+            Page<Topico> topicos = topicoRepository.findByCursoNome(nomeCurso, paginacao);
             return TopicoDto.converter(topicos);
         }
     }

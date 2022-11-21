@@ -1,4 +1,4 @@
-package br.com.alura.forum.modelo;
+package Application.forum.modelo;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
