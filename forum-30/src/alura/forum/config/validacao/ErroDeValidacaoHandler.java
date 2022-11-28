@@ -1,4 +1,4 @@
-package Application.forum.config.validacao;
+package src.alura.forum.config.validacao;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;

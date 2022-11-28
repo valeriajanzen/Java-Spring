@@ -1,11 +1,9 @@
-package Application.forum.controller.dto;
+package src.alura.forum.controller.dto;
 
-import Application.forum.modelo.Topico;
+import src.alura.forum.modelo.Topico;
 import org.springframework.data.domain.Page;
 
 import java.time.LocalDateTime;
-import java.util.List;
-import java.util.stream.Collectors;
 
 public class TopicoDto {
 

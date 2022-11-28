@@ -1,6 +1,6 @@
-package Application.forum.modelo;
+package src.alura.forum.modelo;
 
-import Application.forum.repository.CursoRepository;
+import src.alura.forum.repository.CursoRepository;
 import org.hibernate.validator.constraints.Length;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;

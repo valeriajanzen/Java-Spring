@@ -1,7 +1,7 @@
-package Application.forum.modelo.form;
+package src.alura.forum.modelo.form;
 
-import Application.forum.repository.TopicoRepository;
-import Application.forum.modelo.Topico;
+import src.alura.forum.repository.TopicoRepository;
+import src.alura.forum.modelo.Topico;
 import org.hibernate.validator.constraints.Length;
 
 import javax.validation.constraints.NotEmpty;

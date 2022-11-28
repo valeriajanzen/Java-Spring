@@ -1,17 +1,16 @@
-package Application.forum.controller;
+package src.alura.forum.controller;
 
-import Application.forum.modelo.TopicoForm;
-import Application.forum.repository.TopicoRepository;
-import Application.forum.controller.dto.DetalhesDoTopicoDto;
-import Application.forum.controller.dto.TopicoDto;
-import Application.forum.modelo.Topico;
-import Application.forum.modelo.form.AtualizacaoTopicoForm;
-import Application.forum.repository.CursoRepository;
+import src.alura.forum.modelo.TopicoForm;
+import src.alura.forum.repository.TopicoRepository;
+import src.alura.forum.controller.dto.DetalhesDoTopicoDto;
+import src.alura.forum.controller.dto.TopicoDto;
+import src.alura.forum.modelo.Topico;
+import src.alura.forum.modelo.form.AtualizacaoTopicoForm;
+import src.alura.forum.repository.CursoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
@@ -22,7 +21,6 @@ import org.springframework.web.util.UriComponentsBuilder;
 import javax.transaction.Transactional;
 import javax.validation.Valid;
 import java.net.URI;
-import java.util.List;
 import java.util.Optional;
 
 @RestController

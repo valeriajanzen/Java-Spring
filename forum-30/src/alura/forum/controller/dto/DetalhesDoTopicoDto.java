@@ -1,7 +1,7 @@
-package Application.forum.controller.dto;
+package src.alura.forum.controller.dto;
 
-import Application.forum.modelo.StatusTopico;
-import Application.forum.modelo.Topico;
+import src.alura.forum.modelo.StatusTopico;
+import src.alura.forum.modelo.Topico;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
